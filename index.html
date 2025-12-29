@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abhay Sahu | IT Engineer & Founder</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Arial,sans-serif}
+body{background:#0f172a;color:#fff}
+header{background:#020617;padding:15px 40px;position:sticky;top:0;z-index:10}
+nav{display:flex;justify-content:space-between;align-items:center}
+.logo span{color:#38bdf8}
+nav ul{list-style:none;display:flex}
+nav ul li{margin-left:20px}
+nav ul li a{color:#fff;text-decoration:none}
+nav ul li a:hover{color:#38bdf8}
+.hero{height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.hero h1{font-size:48px}
+.hero span{color:#38bdf8}
+.hero p{margin-top:10px}
+.btn{margin-top:20px;padding:12px 28px;background:#38bdf8;color:#020617;text-decoration:none;border-radius:6px}
+section{padding:60px 80px;text-align:center}
+h2{margin-bottom:30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.card{background:#020617;padding:25px;border-radius:10px;transition:.3s}
+.card:hover{transform:translateY(-10px)}
+form{max-width:420px;margin:auto;display:flex;flex-direction:column}
+input,textarea{margin:10px 0;padding:12px;border:none;border-radius:5px}
+button{padding:12px;background:#38bdf8;border:none;cursor:pointer}
+footer{background:#020617;text-align:center;padding:15px}
+@media(max-width:768px){section{padding:40px 20px}.hero h1{font-size:36px}}
+</style>
+</head>
+<body>
+<header>
+<nav>
+<h2 class="logo">Abhay<span>.</span></h2>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+<section id="home" class="hero">
+<h1>Hi, I'm <span id="typing"></span></h1>
+<p>IT Engineer | Founder of XoxoCode | 7+ Years Experience | ERP Solutions Expert</p>
+<a href="#contact" class="btn">Hire Me</a>
+</section>
+<section id="about">
+<h2>About Me</h2>
+<p style="max-width:700px;margin:auto">I'm Abhay Sahu, an IT Engineer and Founder of <strong>XoxoCode</strong> with 7+ years of experience building modern, responsive, and scalable websites. I also specialize in ERP Solutions, helping businesses optimize and automate their processes efficiently.</p>
+</section>
+<section id="skills">
+<h2>Skills</h2>
+<div class="grid">
+<div class="card">HTML</div>
+<div class="card">CSS</div>
+<div class="card">JavaScript</div>
+<div class="card">Java</div>
+<div class="card">React</div>
+<div class="card">Node.js</div>
+<div class="card">ERP Solutions</div>
+</div>
+</section>
+<section id="projects">
+<h2>Projects</h2>
+<div class="grid">
+<div class="card"><h3>Portfolio Website</h3><p>Personal responsive website</p></div>
+<div class="card"><h3>Business Website</h3><p>Local business solution</p></div>
+<div class="card"><h3>Web Application</h3><p>Dynamic JS-based app</p></div>
+<div class="card"><h3>ERP Implementation</h3><p>End-to-end ERP solutions for businesses</p></div>
+</div>
+</section>
+<section id="contact">
+<h2>Contact Me</h2>
+<form action="mailto:yourmail@gmail.com" method="post" enctype="text/plain">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Your Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
+</section>
+<footer>© 2025 Abhay Sahu | Founder of XoxoCode | ERP Solutions Expert</footer>
+<script>
+const text=["Abhay Sahu","IT Engineer","Founder of XoxoCode","ERP Solutions Expert"];
+let i=0,j=0;
+const el=document.getElementById("typing");
+function type(){if(j<text[i].length){el.textContent+=text[i][j++];setTimeout(type,100)}else{setTimeout(erase,2000)}}
+function erase(){if(j>0){el.textContent=text[i].substring(0,--j);setTimeout(erase,50)}else{i=(i+1)%text.length;setTimeout(type,200)}}
+type();
+</script>
+</body>
+</html>
